@@ -16,8 +16,8 @@ export default function Navbar() {
         <div className="hidden md:flex space-x-10 text-2xl font-semibold">
           <a href="#" className="hover:text-yellow-400 transition duration-300">Home</a>
           <a href="#" className="hover:text-yellow-400 transition duration-300">Movies</a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">TV Shows</a>
-          <a href="#" className="hover:text-yellow-400 transition duration-300">Contact</a>
+          <a href="#" className="hover:text-yellow-400 transition duration-300">Recommendations</a>
+          <a href="#" className="hover:text-yellow-400 transition duration-300">Watchlist</a>
         </div>
 
         {/* Mobile Menu Button */}
