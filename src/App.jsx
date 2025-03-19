@@ -2,10 +2,21 @@ import "./App.css";
 import MovieRecommendation from "./Components/MovieReommendations";
 import Movies from "./Components/Movies";
 import Navbar from "./Components/Navbar";
-import WatchList from "./components/WatchList";
+import WatchList from "./Components/WatchList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Banner from "./components/Banner";
+import Banner from "./Components/Banner";
+import { useState } from "react";
 function App() {
+
+  const [watchList , setWatchList] = useState([])
+
+
+  function handleAddToWatchList(movieObj){
+    const updatedWatchlist = [...watchList , movieObj]
+    setWatchList(updatedWatchlist)
+    console.log(updatedWatchlist)
+  }  
+
   return (
     <>
       <BrowserRouter>
@@ -16,7 +27,7 @@ function App() {
             path="/"
             element={
               <>
-                <Banner /> <Movies />
+                <Banner /> <Movies handleAddtoWatchList={handleAddToWatchList} watchlist={watchList}/>
               </>
             }
           />

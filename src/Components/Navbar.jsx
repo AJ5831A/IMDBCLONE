@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 
 
 
-function Navbar() {
+function NavBar() {
   return (
     <div className="flex space-x-8 items-center pl-3 py-4">
       <Link to='/'><img className="w-[60px]" src={Logo}/></Link>
@@ -25,5 +25,5 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default NavBar;
 
